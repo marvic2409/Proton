@@ -132,3 +132,37 @@ clearly states that though objects can be 'bound' to instances of cefpython's
 browser so that it can be called from JS, in actuality, only the functions are
 bound and not the whole object. So yeah, proper abstraction or you'll have a
 bug on your hands.
+
+# The next big problem - UI Scripting
+
+One of the major requirements of Proton is to eliminate 100% the need for JS
+knowledge and figuring our how to make the setting/editing values of just
+about any element a big jump forwards. There is still the issue of reading
+values out of an element and the much bigger problem of getting html out of
+the way of UI declaration.
+
+Well, reading stuff ends up complicated af (obviously, why is this not easy?)
+The JS callback is executed only after the python function has run its course
+(apparently) and JS return values are not ported to python.
+
+So, when you call python from JS and JS values are set from python, it follows
+that there is a way to port JS values to python in live time instead of waiting
+for control-flow to be passed on, I can't find any mention of it in the
+cefpython docs and will have to stackoverflow it tommorrow. Well, being a bit
+of a letdown, I couldn't/can't let go of the problem, apparently, the JS
+callback is run after python 'returns control', note that my notions my be
+misplaced and wrong because I don't know the internal workings of cefpython.
+This is just my general idea.
+
+There is a workaround, but I abhor it. I'm noting it here any ways.
+
+Let `read(id, attribute)` be a function in JS that executes a python callback
+that sets `document.getElementById(id).getAttribute(attribute)` to a python
+variable called, lets say `jsValue`. We call `read(id, attribute)` from
+python but it doesn't execute till control is passed back to JS, so all the
+code that utilizes `jsValue` is worthless, so the rest of the code - the stuff
+that utilizes `jsvalue` is instead passed to a function called
+`dummyFunctionWrapper` and control passes back to JS. JS now calls
+`dummyFunctionWrapper` as a callback after setting `jsValue` so everything
+works out now. But imposing a predetermined structure on somebodys code is a
+sure method of confusion and also some horrible framework (gui or otherwise)

@@ -2,6 +2,7 @@
 
 <head>
     <script>
+        // python value setting.editing gateways
         function setAttribute(id, attribute, value) {
             document.getElementById(id).setAttribute(attribute, value);
         }
@@ -20,12 +21,33 @@
             } else {
                 document.getElementById(id).innerText += value;
             }
+            // uncoment the last line anlong with the one marked
+            // @pain in 'Fiddling Around.py' together, it shows that
+            // JS callbacks are executed after control returns from
+            // python
+            // printpy('JS has run');
         }
+
+        // python value reading gateways
+        function readAttribute(id, attribute) {
+            tempSet(document.getElementById(id).getAttribute(attribute));
+        }
+
+        function readContent(id) {
+            tempSet(document.getElementById(id).innerHTML);
+        }
+
+        function readText(id) {
+            tempSet(document.getElementById(id).innerText);
+        }
+
+        // bind the requisit stuff
+        bind(readAttribute, readContent, readText);
     </script>
 </head>
 
 <body>
-    <h1 id="counter">Button pressed 0 times.</h1>
+<h1 id="counter">Button pressed 0 times.</h1>
 
     <a href=# onclick="msg_inc()">
         <div style="background-color: chocolate; align-self: center; justify-self: center; height: 50px; width: 50px;">
