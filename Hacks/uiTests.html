@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script>
+        function setAttribute(id, attribute, value) {
+            document.getElementById(id).setAttribute(attribute, value);
+        }
+
+        function setContent(id, to_replace, value) {
+            if (to_replace) {
+                document.getElementById(id).innerHTML = value;
+            } else {
+                document.getElementById(id).innerHTML += value;
+            }
+        }
+
+        function setText(id, to_replace, value) {
+            if (to_replace) {
+                document.getElementById(id).innerText = value;
+            } else {
+                document.getElementById(id).innerText += value;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="counter">Button pressed 0 times.</h1>
+
+    <a href=# onclick="msg_inc()">
+        <div style="background-color: chocolate; align-self: center; justify-self: center; height: 50px; width: 50px;">
+        </div>
+    </a>
+</body>
+
+
+</html>
