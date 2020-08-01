@@ -27,6 +27,7 @@ bindings = cef.JavascriptBindings()
 bindings.SetFunction('msg_inc', msg_increment)
 bindings.SetFunction('bind', bind)
 bindings.SetFunction('printpy', print)
+bindings.SetFunction('update', print)
 
 driver = cef.CreateBrowserSync(url="file:///D:/Projects/GitHub/Proton/Hacks/uiTests.html" ,window_title="Fiddling Around")
 driver.SetJavascriptBindings(bindings)

@@ -1,11 +1,11 @@
 # The thing in a nutshell
 
-Of prime importance is the tutorial.py file under examples. Note to self, all
+Of prime importance is the `tutorial.py` file under examples. Note to self, all
 the magic is in binding objects and the 'External' class defined near the
 bottom. The whole shifty-mind fuck series of function calls to/from
 python/js to each other start in JS calling the 'test_multiple_callbacks'
 method of the 'External' object passed to the browser instance (i guess?
-confusing buisness this is). External is actually a verry crappy, misleading,
+confusing business this is). External is actually a verry crappy, misleading,
 confusing name for a class/variable, he (cztomczak) did a good job of variables
 everywhere else, wonder what happened here.
 

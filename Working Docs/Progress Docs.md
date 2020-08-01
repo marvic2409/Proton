@@ -5,7 +5,12 @@ will/wish itself into existence. It requires vision and it requires work and
 beyond all of that it requires ideas and it requires a plan.
 
 This document (assuming that this project will pick up steam) is meant to
-show, in broad strokes what we plan to do and how to get there.
+show, in broad strokes what we plan to do and how to get there. For the most
+part though, it will put on display the thoughts and work process as it
+progresses through dev.
+
+look through [Notes](Notes.md), [Core Values](Core%20Values.md) and
+[Readme](../README.md)
 
 # The Actual stuff
 
@@ -170,9 +175,9 @@ sure method of confusion and also some horrible framework (gui or otherwise)
 # The data reading problem's solution
 
 There is a handy solution to the issue at hand. Apparently as the python-JS
-communication is asynchronous, returning JS values to python synchronous (i.e.
-during) make a default python callback wrapper that can be called from JS to
-return the value from JS (complicated and unclear af, ik. I'll implement it
+communication is asynchronous, returning JS values to python synchronously can
+be done by making a default python callback wrapper that can be called from JS
+to return the value from JS (complicated and unclear af, ik. I'll implement it
 and then simplify what I mean). This is a simplification of yesterdays idea
 picked up from [samuelhwilliams/Eel](https://github.com/samuelhwilliams/Eel).
 
@@ -184,3 +189,43 @@ call to a read function will multiple Id's is what i have in mind.
 Due to not having the required html/js/css knowledge and not having
 BootstrapStudio installed at the moment, I'll have to stop for now
 till tomorrow.
+
+# The Solution (readValues)
+
+For the input, textarea and select tags, the onchange attribute can be used
+to call a function to update a mirror of that particular element's data on the
+python side.
+
+```html
+<input id= "testBox" type="text" onchange="updateMirror(this.id, this.value);">
+```
+
+```python
+mirror = {}
+
+def updateMirror(id, value):
+    mirror[id] = value
+
+# more code here
+
+# essentially, when ever you want to read data from the webpage, all you got to
+# do now is...
+
+def something():
+    # blah, blah, blah
+
+    v = mirror['textBox']
+    print('contents of testBox are: ' + v)
+
+    # more blah, blah, blah
+
+```
+
+So, in short, you can read data live only from input/select/textarea tags which
+isn't really all that bad. The attribute changes and stuff have to be initiated
+via the python side and hence a small modification of the JS and `updateMirror`
+code will ensure that all changes to elements with id's will be tracked in the
+python mirror.
+
+The next step is to code a proper data exchange interface and hopefully a UML
+Diagram to keep it company (MS Visio Pro, here I come...)

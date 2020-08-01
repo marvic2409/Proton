@@ -1,7 +1,7 @@
 # A Note to Readers/Coders/Contributors
 
 You might notice that 4 of 5 'core values' of Proton are in a two-part
-format, what matters of theese four are the first halves, the second halves
+format, what matters of these four are the first halves, the second halves
 merely serve as rule of thumb counterparts to their vague former halves.
 
 As a coder/contributor to Proton, you’re not expected to merely satisfy the
@@ -21,18 +21,18 @@ serious. As hilarious as it sounds/reads, it is no joke.
 # The core values of Proton
 ### *In a line, To provide simple, fast and flexible UI design with a simple design*
 
-Proton will always be mentioned with a capital 'P', capitalization of the
+- Proton will always be mentioned with a capital 'P', capitalization of the
 remaining letters optional.
 
-To provide simple UI design - even a first timer should be able to learn the
+- To provide simple UI design - even a first timer should be able to learn the
 major capabilities of Proton in under 15 minutes.
 
-To provide a fast UI design - to be able to create a resonably simple UI
+- To provide a fast UI design - to be able to create a reasonably simple UI
 (like the word 2019's opening page) in under 10 minutes.
 
-To provide a flexible design - to be able to create something as detailed as
+- To provide a flexible design - to be able to create something as detailed as
 Words document view.
 
-Simple design (Ease of contribution) - a programer should understand what
+- Simple design (Ease of contribution) - a programer should understand what
 does what and be free to start working on his/her/their contributions in under
 30 mins.

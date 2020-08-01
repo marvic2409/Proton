@@ -1,2 +1,9 @@
-## Ignore all VS Code stuff
+# Ignore all VS Code stuff
 .vscode/
+
+# Ignore all python stuff
+__pycache__/
+
+# Ignore all cef stuff
+blob_storage/
+webrtc_events_log/

@@ -20,18 +20,18 @@ similar problem, very useful but limited to webpages in browsers. Thank
 heavens, python isn't nearly as limited. But then some innovator had an issue
 with being limited and created electronjs - a framework that allows the running
 of a javascript program on a desktop environment (via a browser, duh),
-javascript now unshackled has allowed for some great commersial/non-commersial
+javascript now unshackled has allowed for some great commercial/non-commercial
 applications from vast enterprises/solo individuals to reach just about anyone
 who has a Windows/Mac device. All thanks to electron(js).
 
 Proton aims to do the same for python - unshackle it from the chains of the
-command-line and allow it to soar dusguised as an '.exe' file. (both of which,
+command-line and allow it to soar disguised as an '.exe' file. (both of which,
 as of now are only aims with nothing to back it up)
 
 # Why use proton? (and not its tried-and-tested counterparts)
 
 It is for 3 reasons that you should at least give Proton a chance - it is
-unrestrained, much more so than its competetors, with no care wether you want
+unrestrained, much more so than its competitors, with no care wether you want
 to improve, incorporate, use or sell it. It is visually flexible and nuanced.
 Proton plans in some extent to leverage the full visual prowess of a browser
 much like its inspiration - electronjs, placing its visual capabilities and
@@ -43,7 +43,7 @@ the BeeWare suit. What's the problem with them? On a whole, absolutely nothing,
 individually, a lot!
 
 Let's see, Tinkter looks like crap and is also near impossible to use (have
-never seen it used at all), PyQT is wrapped up in conditions and/or commersial
+never seen it used at all), PyQT is wrapped up in conditions and/or commercial
 licenses making impossible/undesirable to most part-time/open-source 
 programmers, PySide is PyQt's cousin, though less restrictive, it is extremely
 clunky (as in hard to use pain-in-the-ass for this author), kivy is good. It
@@ -55,13 +55,18 @@ possibly glitchy one. Finally, the BeeWare suite. It holds high ambitions, much
 higher than the promise Proton holds, it’s backed up by a sizable community,
 it's been around for quite a while; you would have heard of it during those
 big, supposedly (and sometimes actually) important conferences but, it isn't
-quite there, there isn't a fully functional Beeware suite yet and neither is
+quite there, there isn't a fully functional BeeWare suite yet and neither is
 the existing work easy to use.
 
 With the current state of affairs, most may be content with a GUI framework
-that works and looks resonably good. Not everyone, not the few who want to
+that works and looks reasonably good. Not everyone, not the few who want to
 compare with the great consumer-facing companies, not those people who are
-fedup with opensource applications looking the crappiest, not you, not
+fed-up with opensource applications looking the crappiest, not you, not
 anymore. Proton, though as of now under construction, is for those of you who
 believe that open-source can and should look good, that opensource can be much
 easier and intuitive than it currently is.
+
+# See Also
+- [Notes](Working%20Docs/Notes.md)
+- [Core Values](Working%20Docs/Core%20Values.md)
+- [Progress Docs](Working%20Docs/Progress%20Docs.md)
