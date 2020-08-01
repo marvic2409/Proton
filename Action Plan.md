@@ -1,7 +1,7 @@
 # What is this document?
 
 Proton's purpose is ambitious. Proton's expectations equally so, but it won't
-will/wish itself into existance. It requires vision and it requires work and
+will/wish itself into existence. It requires vision and it requires work and
 beyond all of that it requires ideas and it requires a plan.
 
 This document (assuming that this project will pick up steam) is meant to
@@ -32,8 +32,8 @@ New Problems:
 
 # Problem update
 
-It is excedingly hard to change attributes/variables livetime in JS from python
-as you have to hardcode the attribute if using JS functions.
+It is exceedingly hard to change attributes/variables live-time in JS from
+python as you have to hardcode the attribute if using JS functions.
 
 ```js
 //for those of you who didn't get that,
@@ -91,7 +91,7 @@ function set(Id, value){
 // so now calling set(Id, value) will set the desired attribute.
  ```
 
-A better soultuion,
+A better solution,
 
 ```js
 
@@ -124,8 +124,8 @@ I still have to check if python object attributes can be changed or weather
 something akin to what has been done for JS must be done for python too.
 
 It's about 13 hours since me last touching this project, and it seems that I
-don't have to check the whole python object attribute thing. If consistant
-abstraction is implimented so that class attributes aren't directly referenced
+don't have to check the whole python object attribute thing. If consistent
+abstraction is implemented so that class attributes aren't directly referenced
 at any point (i.e. they are only manipulated via class methods), nothing like
 what has been done for JS will be required, else yes. cefpython documentation
 clearly states that though objects can be 'bound' to instances of cefpython's
@@ -148,7 +148,7 @@ The JS callback is executed only after the python function has run its course
 So, when you call python from JS and JS values are set from python, it follows
 that there is a way to port JS values to python in live time instead of waiting
 for control-flow to be passed on, I can't find any mention of it in the
-cefpython docs and will have to stackoverflow it tommorrow. Well, being a bit
+cefpython docs and will have to stackoverflow it tomorrow. Well, being a bit
 of a letdown, I couldn't/can't let go of the problem, apparently, the JS
 callback is run after python 'returns control', note that my notions my be
 misplaced and wrong because I don't know the internal workings of cefpython.
@@ -164,5 +164,23 @@ code that utilizes `jsValue` is worthless, so the rest of the code - the stuff
 that utilizes `jsvalue` is instead passed to a function called
 `dummyFunctionWrapper` and control passes back to JS. JS now calls
 `dummyFunctionWrapper` as a callback after setting `jsValue` so everything
-works out now. But imposing a predetermined structure on somebodys code is a
+works out now. But imposing a predetermined structure on somebody's code is a
 sure method of confusion and also some horrible framework (gui or otherwise)
+
+# The data reading problem's solution
+
+There is a handy solution to the issue at hand. Apparently as the python-JS
+communication is asynchronous, returning JS values to python synchronous (i.e.
+during) make a default python callback wrapper that can be called from JS to
+return the value from JS (complicated and unclear af, ik. I'll implement it
+and then simplify what I mean). This is a simplification of yesterdays idea
+picked up from [samuelhwilliams/Eel](https://github.com/samuelhwilliams/Eel).
+
+Ok, so one possible solution is to have all JS return functions take a
+pyCallback argument, then calling `pyCallback(returnValue)` instead of
+attempting to return a value. The reading of multiple values will lead
+to unnecessary fragmentation of code (which is very bad), so a single
+call to a read function will multiple Id's is what i have in mind.
+Due to not having the required html/js/css knowledge and not having
+BootstrapStudio installed at the moment, I'll have to stop for now
+till tomorrow.

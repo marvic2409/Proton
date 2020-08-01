@@ -29,16 +29,20 @@
         }
 
         // python value reading gateways
-        function readAttribute(id, attribute) {
-            tempSet(document.getElementById(id).getAttribute(attribute));
+        function readAttribute(id, attribute, py_callback) {
+            py_callback(document.getElementById(id).getAttribute(attribute));
         }
 
-        function readContent(id) {
-            tempSet(document.getElementById(id).innerHTML);
+        function readContent(id, py_callback) {
+            py_callback(document.getElementById(id).innerHTML);
         }
 
-        function readText(id) {
-            tempSet(document.getElementById(id).innerText);
+        function readText(ids, callback) {
+            for (var i = 0; i < ids.length; i++){
+                var q = document.getElementById(ids[i]).innerText;
+                document.getElementById('cache').innerHTML += q + '<br>';
+
+            }
         }
 
         // bind the requisit stuff
