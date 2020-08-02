@@ -9,10 +9,12 @@
 
     <div id="randomHolder"></div>
 
-    <a href=# onclick="msg_inc()">
+    <a href=# onclick="msg_inc();">
         <div style="background-color: chocolate; align-self: center; justify-self: center; height: 50px; width: 50px;">
         </div>
     </a>
+
+    <input type="text" id="checker" onchange="gateway.updateMirror(this.id, 'value', this.value); pyPrint();">
 
 </body>
 

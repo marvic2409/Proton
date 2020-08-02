@@ -31,7 +31,7 @@ as of now are only aims with nothing to back it up)
 # Why use proton? (and not its tried-and-tested counterparts)
 
 It is for 3 reasons that you should at least give Proton a chance - it is
-unrestrained, much more so than its competitors, with no care wether you want
+unrestrained, much more so than its competitors, with no care whether you want
 to improve, incorporate, use or sell it. It is visually flexible and nuanced.
 Proton plans in some extent to leverage the full visual prowess of a browser
 much like its inspiration - electronjs, placing its visual capabilities and
@@ -52,7 +52,7 @@ discover it but then, you discover that there are issues when you plan to pull
 of a decently good GUI (anything that requires more than 1 single screen), yes
 you can pull it off but the only way (as of writing this) is a hackey and a
 possibly glitchy one. Finally, the BeeWare suite. It holds high ambitions, much
-higher than the promise Proton holds, it’s backed up by a sizable community,
+higher than the promise Proton holds, it’s backed up by a sizeable community,
 it's been around for quite a while; you would have heard of it during those
 big, supposedly (and sometimes actually) important conferences but, it isn't
 quite there, there isn't a fully functional BeeWare suite yet and neither is
@@ -62,7 +62,7 @@ With the current state of affairs, most may be content with a GUI framework
 that works and looks reasonably good. Not everyone, not the few who want to
 compare with the great consumer-facing companies, not those people who are
 fed-up with opensource applications looking the crappiest, not you, not
-anymore. Proton, though as of now under construction, is for those of you who
+any more. Proton, though as of now under construction, is for those of you who
 believe that open-source can and should look good, that opensource can be much
 easier and intuitive than it currently is.
 
@@ -70,3 +70,7 @@ easier and intuitive than it currently is.
 - [Notes](Working%20Docs/Notes.md)
 - [Core Values](Working%20Docs/Core%20Values.md)
 - [Progress Docs](Working%20Docs/Progress%20Docs.md)
+
+# Latest Updates
+
+- You can now read/write/edit contents of the UI live-time.

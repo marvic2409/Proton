@@ -9,19 +9,19 @@ function setAttribute(id, attribute, value) {
     document.getElementById(id).setAttribute(attribute, value);
 }
 
-function setText(id, toReplace = true, value) {
+function setText(id, displayText, toReplace = true) {
     if (toReplace) {
-        document.getElementById(id).innerText = value;
+        document.getElementById(id).innerText = displayText.replace('\n', '<br>');
     } else {
-        document.getElementById(id).innerText += value.replace('\n', '<br>')
+        document.getElementById(id).innerText += displayText.replace('\n', '<br>');
     }
 }
 
-function setContent(id, toReplace = true, value) {
+function setContent(id, htmlCode, toReplace = true) {
     if (toReplace) {
-        document.getElementById(id).innerHTML = value;
+        document.getElementById(id).innerHTML = htmlCode;
     } else {
-        document.getElementById(id).innerHTML += value;
+        document.getElementById(id).innerHTML += htmlCode;
     }
 }
 
