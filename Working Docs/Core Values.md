@@ -10,7 +10,7 @@ excellence they set. There are thousands of super useful pieces of software
 that never truly see the light of day due to a command-line, there are few and
 far options in between for those who want to create a GUI (in python at least)
 and you as a contributor are in a unique position to challenge the status-quo,
-help a million other programers and the only way to do that (considering the
+help a million other programmers and the only way to do that (considering the
 tried and tested competition) is put put out the very best work you can. If
 these standards are hard and you can only manage 50 line of excellence, that
 50 lines will be more welcome than 1000 lines of non-excellence.
@@ -33,6 +33,6 @@ major capabilities of Proton in under 15 minutes.
 - To provide a flexible design - to be able to create something as detailed as
 Words document view.
 
-- Simple design (Ease of contribution) - a programer should understand what
+- Simple design (Ease of contribution) - a programmer should understand what
 does what and be free to start working on his/her/their contributions in under
-30 mins.
+30 minutes.

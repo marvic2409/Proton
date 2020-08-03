@@ -1,5 +1,9 @@
 # Note, in python code, the 'id' parameter breaks naming conventions and is set
 # as 'ID' because 'id' is one of pythons standard library functions.
+#
+# This file works in conjunction with the dataTransfer.js file, the working
+# of this system of reading/writing/editing data on CEF livetime requires
+# that an instance of the Gateway class be bound to the CEF browser instance.
 
 class ProtonException(Exception): pass
 

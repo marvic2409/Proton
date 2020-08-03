@@ -154,7 +154,7 @@ So, when you call python from JS and JS values are set from python, it follows
 that there is a way to port JS values to python in live time instead of waiting
 for control-flow to be passed on, I can't find any mention of it in the
 cefpython docs and will have to stackoverflow it tomorrow. Well, being a bit
-of a letdown, I couldn't/can't let go of the problem, apparently, the JS
+of a let-down, I couldn't/can't let go of the problem, apparently, the JS
 callback is run after python 'returns control', note that my notions my be
 misplaced and wrong because I don't know the internal workings of cefpython.
 This is just my general idea.
@@ -229,3 +229,8 @@ python mirror.
 
 The next step is to code a proper data exchange interface and hopefully a UML
 Diagram to keep it company (MS Visio Pro, here I come...)
+
+Well, with the Data Exchange Interface done, the next major issue to tackle is
+the scripting. Considering that its a big issue unto itself, I don't think it
+wise to continue documenting progress/ideas here, so I'm continuing this in a
+different file - [Progress Docs2](Progress%20Docs2.md)
